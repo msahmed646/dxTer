@@ -8,6 +8,8 @@
     list-style-type: none;
     font-family: 'Poppins', sans-serif;
 }
+/*============== Dashboard ==============*/
+
 /*============== Sidebar ==============*/
 
 .sidebar {
@@ -231,3 +233,10 @@ thead th {
 }
 
 
+
+/*============== Housekeeping ==============*/
+/* 
+.hk-content {
+    transition: margin-left 300ms;
+    margin-left: 345px;
+} */
