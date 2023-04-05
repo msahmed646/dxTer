@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,600;0,700;1,100;1,200;1,300;1,800&family=Rampart+One&family=Sacramento&family=Tilt+Neon&family=Ubuntu:ital@1&display=swap');
+
+* {
+    margin-left: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: 'Poppins', sans-serif;
+}
+/*============== Sidebar ==============*/
+
+.sidebar {
+    width: 345px;
+    position: fixed;
+    left: 0;
+    /* padding-top: 1rem; */
+    top: 0%;
+    height: 100%;
+    background-color: #57C5B6;
+    z-index: 100;
+    transition: width 300ms;
+}
+
+.sidebar-brand {
+    height: 90px;
+    padding: 1rem 0 1rem 2rem;
+    color: #002B5B;
+    
+}
+
+.sidebar-brand h1 {
+    font-weight: bold;
+    font-style: oblique;
+}
+
+.sidebar-brand span {
+    display: inline-block;
+    /* padding-left: 1rem; */
+}
+
+.sidebar-brand span:last-child{
+    padding-left: 1rem;
+}
+
+.sidebar-items {
+    margin-top: 1 rem;
+}
+
+.sidebar-items li {
+    width: 100%;
+    margin-bottom: 1.9rem;
+    padding-left: 1rem;
+}
+
+.sidebar-items a {
+    padding-left: 1rem;
+    display: block;
+    color:#fff;
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.sidebar-items a.active{
+    background: white;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: #002B5B;
+    border-radius: 30px 0px 0px 30px;
+}
+
+/* .sidebar-items li:hover {
+    background: rgb(241, 237, 237);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: #002B5B;
+    border-radius: 30px 0px;
+
+} */
+
+.sidebar-items a span:first-child {
+    font-size: 1.5rem;
+    padding-right: 1rem;
+}
+
+#nav-toggle:checked + .sidebar{
+    width: 70px;
+}
+
+#nav-toggle:checked + .sidebar-brand,
+#nav-toggle:checked + .sidebar-items{
+    padding-left: 1rem;
+}
+
+#nav-toggle:checked + .sidebar .sidebar-brand h1 span:last-child, #nav-toggle:checked + .sidebar .sidebar-items li a span:last-child {
+    display: none;
+}
+
+#nav-toggle:checked ~ .content{
+    margin-left: 70px;
+}
+
+#nav-toggle:checked ~ .content header{
+    width: 100%;
+}
+
+.content {
+    transition: margin-left 300ms;
+    margin-left: 345px;
+}
+
+/*============== Content Header ==============*/
+
+header {
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    position: inherit;
+    left: 345px;
+    width: calc(100%-345px);
+    top: 0;
+    z-index: 100;
+    transition: left 300ms;
+}
+
+header h2 {
+    color: #1A5F7A;
+}
+
+header label span {
+    font-size: 1.4rem;
+    padding-right: 1rem;
+}
+
+/*============== User wrapper ==============*/
+.user-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.user-wrapper img {
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.user-wrapper h5 {
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: start;
+    padding: 0;
+    
+}
+
+.user-wrapper small {
+    display: inline-block;
+    color:#002B5B;
+    margin-top: -3px;
+    padding-left: 1rem;
+}
+
+main{
+    margin-top: 2px;
+    padding: 2rem 1.5rem;
+    background: #f1f5f9;
+    min-height: calc(100vh - 90px);
+}
+
+/*============== Cards ==============*/
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    margin-top: 1rem;
+}
+
+.card-single{
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 2px;
+}
+
+.card-single div:last-child span {
+    font-size: 3rem;
+    color: #1A5F7A;
+}
+.card-single div:first-child span {
+    color: #1A5F7A;
+}
+
+.card-single:first-child {
+    background: #57C5B6;
+}
+
+.card-single:first-child h1, 
+.card-single :last-child div:first-child span,
+.card-single :last-child div:last-child span {
+    color: #fff;
+}
+
+/*============== Task Progress Table ==============*/
+
+.work-status {
+    margin-top: 2rem;
+}
+
+.table-buttons {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 0.5rem;
+}
+
+thead {
+    background-color: #159895;
+}
+
+thead th {
+    font-size: large;
+    font-weight: 1000;
+    font-style: oblique;
+    color: #fff;
+}
+
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+    background-color: #F5F3C1;
+}
+
+
