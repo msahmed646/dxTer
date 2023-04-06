@@ -244,11 +244,6 @@ header label span {
 
 
 /*============== Housekeeping ==============*/
-/* 
-.hk-content {
-    transition: margin-left 300ms;
-    margin-left: 345px;
-} */
 
 .form-group row{
     padding: 2rem;
