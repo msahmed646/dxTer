@@ -176,9 +176,6 @@ main{
     padding-top: 2rem;
 }
 
-.hk-status {
-    padding-top: 3rem;
-}
 .cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -189,10 +186,14 @@ main{
 .card-single{
     display: flex;
     justify-content: space-between;
-    /* background: #997a7a; */
     padding: 2rem;
     border-radius: 2px;
 }
+
+.overview .card:first-child {
+    background-color: #faecec;
+}
+
 
 .card-single div:last-child span {
     font-size: 3rem;
@@ -203,6 +204,10 @@ main{
 .card-single :last-child div:first-child span,
 .card-single :last-child div:last-child span {
     color: #000;
+}
+
+.hk-status {
+    padding-top: 3rem;
 }
 
 
@@ -221,11 +226,6 @@ main{
 .vacant {
     padding-top: 1rem;
 }
-/*.progress-card
- .hk-status .progress-card h6{
-    padding-top: 2rem;
-    padding-bottom: 1rem;
-} */
 
 /*============== Task Progress Table ==============*/
 
