@@ -72,14 +72,14 @@
     border-radius: 30px 0px 0px 30px;
 }
 
-/* .sidebar-items li:hover {
+.sidebar-items li:hover {
     background: rgb(241, 237, 237);
     padding-top: 1rem;
     padding-bottom: 1rem;
     color: #002B5B;
     border-radius: 30px 0px;
 
-} */
+}
 
 .sidebar-items a span:first-child {
     font-size: 1.5rem;
@@ -165,24 +165,31 @@ header label span {
 
 main{
     margin-top: 2px;
-    padding: 2rem 1.5rem;
+    /* padding: 2rem 1.5rem; */
     background: #f1f5f9;
     min-height: calc(100vh - 90px);
 }
 
 /*============== Cards ==============*/
 
+.overview {
+    padding-top: 2rem;
+}
+
+.hk-status {
+    padding-top: 3rem;
+}
 .cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 2rem;
     margin-top: 1rem;
-}
+} 
 
 .card-single{
     display: flex;
     justify-content: space-between;
-    background: #fff;
+    /* background: #997a7a; */
     padding: 2rem;
     border-radius: 2px;
 }
@@ -191,19 +198,34 @@ main{
     font-size: 3rem;
     color: #1A5F7A;
 }
-.card-single div:first-child span {
-    color: #1A5F7A;
-}
-
-.card-single:first-child {
-    background: #F5F3C1;
-}
 
 .card-single:first-child h1, 
 .card-single :last-child div:first-child span,
 .card-single :last-child div:last-child span {
-    color: #fff;
+    color: #000;
 }
+
+
+/*============== HK Status Table ==============*/
+
+.hk-status table tbody tr td:first-child{
+    text-align: end;
+    padding-right: 1rem;    
+}
+
+.progress-card {
+    background-color: #fff;
+    margin-top: 2.5rem;
+}
+
+.vacant {
+    padding-top: 1rem;
+}
+/*.progress-card
+ .hk-status .progress-card h6{
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+} */
 
 /*============== Task Progress Table ==============*/
 
@@ -211,27 +233,21 @@ main{
     margin-top: 2rem;
 }
 
-.table-buttons {
-    display: flex;
-    flex-direction: row-reverse;
-    gap: 0.5rem;
-}
-
-thead {
+.work-status table thead {
     background-color: #159895;
 }
 
-thead th {
+.work-status table thead th {
     font-size: large;
     font-weight: 1000;
     font-style: oblique;
     color: #fff;
+    text-align: center;
 }
 
-.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
-    background-color: #F5F3C1;
+.work-status table tbody {
+    text-align: center;
 }
-
 
 
 /*============== Housekeeping ==============*/
@@ -240,3 +256,7 @@ thead th {
     transition: margin-left 300ms;
     margin-left: 345px;
 } */
+
+.form-group row{
+    padding: 2rem;
+}

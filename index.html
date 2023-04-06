@@ -11,6 +11,8 @@
     <!-- Additional CSS must be placed after Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css" />
+
     <link rel="stylesheet" href="css/styles.css" />
 
 </head>
@@ -79,46 +81,143 @@
         </header>
 
         <main>
-            <div class="cards">
-                <div class="card-single">
-                    <div>
-                        <h1>4</h1>
-                        <span>Housekeepers</span>
-                    </div>
+            <div class="overview">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <div class="card">
+                                <div class="card-single">
+                                    <div>
+                                        <h1>4</h1>
+                                        <span>Housekeepers</span>
+                                    </div>
+                                    <div>
+                                        <span class="fas fa-user"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-3">
+                            <div class="card">
+                                <div class="card-single">
+                                    <div>
+                                        <h1>2</h1>
+                                        <span>Engineers</span>
+                                    </div>
+                                    <div>
+                                        <span class="fas fa-tools"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-                    <div>
-                        <span class="fas fa-user"></span>
+                        <div class="col-lg-3">
+                            <div class="card">
+                                <div class="card-single">
+                                    <div>
+                                        <h1>0</h1>
+                                        <span>Issues</span>
+                                    </div>
+                                    <div>
+                                        <span class="fas fa-exclamation-circle"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3">
+                            <div class="card">
+                                <div class="card-single">
+                                    <div>
+                                        <h1>10</h1>
+                                        <span>Notifications</span>
+                                    </div>
+                                    <div>
+                                        <span class="fas fa-bell"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="card-single">
-                    <div>
-                        <h1>2</h1>
-                        <span>Engineers</span>
-                    </div>
-                    <div>
-                        <span class="fas fa-tools"></span>
-                    </div>
-                </div>
+            <div class="hk-status">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="card w-100">
+                                <div class="card-body">
+                                    <table class="table table-sm">
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th>Rooms</th>
+                                                <th>50</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><button type="button" class="btn btn-danger"></button></td>
+                                                <td>Dirty</td>
+                                                <td>(15)</td>
+                                            </tr>
 
-                <div class="card-single">
-                    <div>
-                        <h1>0</h1>
-                        <span>Issues</span>
-                    </div>
-                    <div>
-                        <span class="fas fa-exclamation-circle"></span>
-                    </div>
-                </div>
+                                            <tr>
+                                                <td><button type="button" class="btn btn-success"></button></td>
+                                                <td>Clean</td>
+                                                <td>(5)</td>
+                                            </tr>
 
-                <div class="card-single">
-                    <div>
-                        <h1>10</h1>
-                        <span>Notifications</span>
-                    </div>
-                    <div>
-                        <span class="fas fa-bell"></span>
-                    </div>
+                                            <tr>
+                                                <td><button type="button" class="btn btn-info"></button></td>
+                                                <td>Inspect</td>
+                                                <td>(8)</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td><button type="button" class="btn btn-secondary"></button></td>
+                                                <td>Touch-Up</td>
+                                                <td>(22)</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td><button type="button" class="btn btn-warning"></button></td>
+                                                <td>DND</td>
+                                                <td>(0)</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-6">
+                            <div class="progress-card">
+                                <div class="card-body">
+                                    <div class="occupied">
+                                        <h6><em>Occupied Rooms</em></h6>
+                                        <div class="progress" style="height: 35px;">
+                                            <div class="progress-bar bg-secondary" role="progressbar" style="width: 44%;" aria-valuenow="44" aria-valuemin="0" aria-valuemax="100">44%</div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="vacant">
+                                        <h6><em>Vacant Rooms</em></h6>
+                                        <div class="progress" style="height: 35px;">
+                                            <div class="progress-bar bg-danger" role="progressbar" style="width: 54%" aria-valuenow="54" aria-valuemin="0" aria-valuemax="100">54% Dirty</div>
+                                            
+                                            <div class="progress-bar bg-success" role="progressbar" style="width: 18%" aria-valuenow="18" aria-valuemin="0" aria-valuemax="100">18% Clean</div>
+                                            
+                                            <div class="progress-bar bg-info" role="progressbar" style="width: 28%" aria-valuenow="28" aria-valuemin="0" aria-valuemax="100">28% Inspect</div>
+
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
                 </div>
             </div>
 
@@ -126,11 +225,6 @@
                 <div class="card">
                     <div class="card-header">
                         <h2><em>Task Progress</em></h2>
-                            
-                            <!-- <div class="col table-buttons">
-                                <button type="button" class="btn btn-secondary">Collapse</button>
-                                <button type="button" class="btn btn-info">See All</button>
-                            </div> -->   
                     </div>
 
                     <div class="card-body">
@@ -203,7 +297,6 @@
                                           </div>
                                     </td>
                                 </tr>
-                                
                             </tbody>
                         </table>
                     </div>
@@ -216,6 +309,7 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    
     <script src="js/scripts.js"></script>
     
 
