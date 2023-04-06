@@ -67,131 +67,722 @@
         </header>
     
         <main>
-            <ul class="nav nav-tabs nav-fill" id="statusTab" role="tablist">
-                <li class="nav-item" role="presentation">
-                    <a title="" class="nav-link active" id="hk-status-tab" data-toggle="tab" href="#hk-status" role="tab" aria-controls="hk-status" aria-selected="true">Set Housekeeping Status</a>
-                  </li>
-                  <li class="nav-item" role="presentation">
-                    <a title="" class="nav-link" id="assign-tab" data-toggle="tab" href="#assign" role="tab" aria-controls="assign" aria-selected="false">Assign Rooms</a>
-                  </li>
-            </ul>
-
-            <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade show active" id="hk-status" role="tabpanel" aria-labelledby="hk-status-tab">
-                    <div class="accordion" id="hk-accordion">
-                        <div class="card">
-                            <div class="card-header" id="headingOne">
-                                <h2 class="mb-0">
-                                    <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        <strong>First Floor</strong>
-                                    </button>
-                                </h2>
-                            </div>
-                      
-                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#hk-accordion">
-                                <div class="card-body">
-
-                                    
-                                </div>
-                            </div>
-                        </div>
-        
-                        <div class="card">
-                            <div class="card-header" id="headingTwo">
-                                <h2 class="mb-0">
-                                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        <strong>Second Floor</strong>
-                                    </button>
-                                </h2>
-                            </div>
-                            
-                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                                <div class="card-body">
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="card">
-                            <div class="card-header" id="headingThree">
-                                <h2 class="mb-0">
-                                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        <strong>Third Floor</strong>
-                                    </button>
-                                </h2>
-                            </div>
-                            
-                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                                <div class="card-body">
-                              
-        
+            <div class="accordion" id="hkaccordion">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                First Floor
+                            </button>
+                        </h2>
+                    </div>
+              
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col">
+                                        <table class="table table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Room #</th>
+                                                    <th scope="col">HK Status</th>
+                                                    <th scope="col">Assign To</th>
+                                                    <th scope="col"></th>
+                                                    <th scope="col">Room #</th>
+                                                    <th scope="col">HK Status</th>
+                                                    <th scope="col">Assign To</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">101</th>
+                                                    <td><select name="hk-status-name" class="form-control status-name">
+                                                        <option selected>Select...</option>
+                                                        <option value="dirty">Dirty</option>
+                                                        <option value="clean">Clean</option>
+                                                        <option value="inspect">Inspect</option>
+                                                        <option value="touchup">TouchUp</option>
+                                                        <option value="dnd">DND</option>
+                                                        </select>
+                                                    </td>
+                                                    <td><select name="hk-name" class="form-control hk-name">
+                                                        <option selected>Select...</option>
+                                                        <option value="hk_1">Alexis Smith</option>
+                                                        <option value="hk_2">Clair Johnson</option>
+                                                        <option value="hk_3">Rebecca Murray</option>
+                                                        <option value="hk_4">Karla Tavarez</option>
+                                                        <option value="hk_5">Leslie Nayeli</option>
+                                                        </select>
+                                                    </td>
+                                                    <td></td>
+                                                    <th scope="row">102</th>
+                                                    <td><select name="hk-status-name" class="form-control status-name">
+                                                        <option selected>Select...</option>
+                                                        <option value="dirty">Dirty</option>
+                                                        <option value="clean">Clean</option>
+                                                        <option value="inspect">Inspect</option>
+                                                        <option value="touchup">TouchUp</option>
+                                                        <option value="dnd">DND</option>
+                                                        </select>
+                                                    </td>
+                                                    <td><select name="hk-name" class="form-control hk-name">
+                                                        <option selected>Select...</option>
+                                                        <option value="hk_1">Alexis Smith</option>
+                                                        <option value="hk_2">Clair Johnson</option>
+                                                        <option value="hk_3">Rebecca Murray</option>
+                                                        <option value="hk_4">Karla Tavarez</option>
+                                                        <option value="hk_5">Leslie Nayeli</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">103</th>
+                                                    <td><select name="hk-status-name" class="form-control status-name">
+                                                        <option selected>Select...</option>
+                                                        <option value="dirty">Dirty</option>
+                                                        <option value="clean">Clean</option>
+                                                        <option value="inspect">Inspect</option>
+                                                        <option value="touchup">TouchUp</option>
+                                                        <option value="dnd">DND</option>
+                                                        </select>
+                                                    </td>
+                                                    <td><select name="hk-name" class="form-control hk-name">
+                                                        <option selected>Select...</option>
+                                                        <option value="hk_1">Alexis Smith</option>
+                                                        <option value="hk_2">Clair Johnson</option>
+                                                        <option value="hk_3">Rebecca Murray</option>
+                                                        <option value="hk_4">Karla Tavarez</option>
+                                                        <option value="hk_5">Leslie Nayeli</option>
+                                                        </select>
+                                                    </td>
+                                                    <td></td>
+                                                    <th scope="row">104</th>
+                                                    <td><select name="hk-status-name" class="form-control status-name">
+                                                        <option selected>Select...</option>
+                                                        <option value="dirty">Dirty</option>
+                                                        <option value="clean">Clean</option>
+                                                        <option value="inspect">Inspect</option>
+                                                        <option value="touchup">TouchUp</option>
+                                                        <option value="dnd">DND</option>
+                                                        </select>
+                                                    </td>
+                                                    <td><select name="hk-name" class="form-control hk-name">
+                                                        <option selected>Select...</option>
+                                                        <option value="hk_1">Alexis Smith</option>
+                                                        <option value="hk_2">Clair Johnson</option>
+                                                        <option value="hk_3">Rebecca Murray</option>
+                                                        <option value="hk_4">Karla Tavarez</option>
+                                                        <option value="hk_5">Leslie Nayeli</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">105</th>
+                                                    <td><select name="hk-status-name" class="form-control status-name">
+                                                        <option selected>Select...</option>
+                                                        <option value="dirty">Dirty</option>
+                                                        <option value="clean">Clean</option>
+                                                        <option value="inspect">Inspect</option>
+                                                        <option value="touchup">TouchUp</option>
+                                                        <option value="dnd">DND</option>
+                                                        </select>
+                                                    </td>
+                                                    <td><select name="hk-name" class="form-control hk-name">
+                                                        <option selected>Select...</option>
+                                                        <option value="hk_1">Alexis Smith</option>
+                                                        <option value="hk_2">Clair Johnson</option>
+                                                        <option value="hk_3">Rebecca Murray</option>
+                                                        <option value="hk_4">Karla Tavarez</option>
+                                                        <option value="hk_5">Leslie Nayeli</option>
+                                                        </select>
+                                                    </td>
+                                                    <td></td>
+                                                    <th scope="row">106</th>
+                                                    <td><select name="hk-status-name" class="form-control status-name">
+                                                        <option selected>Select...</option>
+                                                        <option value="dirty">Dirty</option>
+                                                        <option value="clean">Clean</option>
+                                                        <option value="inspect">Inspect</option>
+                                                        <option value="touchup">TouchUp</option>
+                                                        <option value="dnd">DND</option>
+                                                        </select>
+                                                    </td>
+                                                    <td><select name="hk-name" class="form-control hk-name">
+                                                        <option selected>Select...</option>
+                                                        <option value="hk_1">Alexis Smith</option>
+                                                        <option value="hk_2">Clair Johnson</option>
+                                                        <option value="hk_3">Rebecca Murray</option>
+                                                        <option value="hk_4">Karla Tavarez</option>
+                                                        <option value="hk_5">Leslie Nayeli</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">107</th>
+                                                    <td><select name="hk-status-name" class="form-control status-name">
+                                                        <option selected>Select...</option>
+                                                        <option value="dirty">Dirty</option>
+                                                        <option value="clean">Clean</option>
+                                                        <option value="inspect">Inspect</option>
+                                                        <option value="touchup">TouchUp</option>
+                                                        <option value="dnd">DND</option>
+                                                        </select>
+                                                    </td>
+                                                    <td><select name="hk-name" class="form-control hk-name">
+                                                        <option selected>Select...</option>
+                                                        <option value="hk_1">Alexis Smith</option>
+                                                        <option value="hk_2">Clair Johnson</option>
+                                                        <option value="hk_3">Rebecca Murray</option>
+                                                        <option value="hk_4">Karla Tavarez</option>
+                                                        <option value="hk_5">Leslie Nayeli</option>
+                                                        </select>
+                                                    </td>
+                                                    <td></td>
+                                                    <th scope="row">108</th>
+                                                    <td><select name="hk-status-name" class="form-control status-name">
+                                                        <option selected>Select...</option>
+                                                        <option value="dirty">Dirty</option>
+                                                        <option value="clean">Clean</option>
+                                                        <option value="inspect">Inspect</option>
+                                                        <option value="touchup">TouchUp</option>
+                                                        <option value="dnd">DND</option>
+                                                        </select>
+                                                    </td>
+                                                    <td><select name="hk-name" class="form-control hk-name">
+                                                        <option selected>Select...</option>
+                                                        <option value="hk_1">Alexis Smith</option>
+                                                        <option value="hk_2">Clair Johnson</option>
+                                                        <option value="hk_3">Rebecca Murray</option>
+                                                        <option value="hk_4">Karla Tavarez</option>
+                                                        <option value="hk_5">Leslie Nayeli</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">109</th>
+                                                    <td><select name="hk-status-name" class="form-control status-name">
+                                                        <option selected>Select...</option>
+                                                        <option value="dirty">Dirty</option>
+                                                        <option value="clean">Clean</option>
+                                                        <option value="inspect">Inspect</option>
+                                                        <option value="touchup">TouchUp</option>
+                                                        <option value="dnd">DND</option>
+                                                        </select>
+                                                    </td>
+                                                    <td><select name="hk-name" class="form-control hk-name">
+                                                        <option selected>Select...</option>
+                                                        <option value="hk_1">Alexis Smith</option>
+                                                        <option value="hk_2">Clair Johnson</option>
+                                                        <option value="hk_3">Rebecca Murray</option>
+                                                        <option value="hk_4">Karla Tavarez</option>
+                                                        <option value="hk_5">Leslie Nayeli</option>
+                                                        </select>
+                                                    </td>
+                                                    <td></td>
+                                                    <th scope="row">110</th>
+                                                    <td><select name="hk-status-name" class="form-control status-name">
+                                                        <option selected>Select...</option>
+                                                        <option value="dirty">Dirty</option>
+                                                        <option value="clean">Clean</option>
+                                                        <option value="inspect">Inspect</option>
+                                                        <option value="touchup">TouchUp</option>
+                                                        <option value="dnd">DND</option>
+                                                        </select>
+                                                    </td>
+                                                    <td><select name="hk-name" class="form-control hk-name">
+                                                        <option selected>Select...</option>
+                                                        <option value="hk_1">Alexis Smith</option>
+                                                        <option value="hk_2">Clair Johnson</option>
+                                                        <option value="hk_3">Rebecca Murray</option>
+                                                        <option value="hk_4">Karla Tavarez</option>
+                                                        <option value="hk_5">Leslie Nayeli</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 
-                <div class="tab-pane fade" id="assign" role="tabpanel" aria-labelledby="assign-tab">
-                    <div class="accordion" id="hk-accordion">
-                        <div class="card">
-                            <div class="card-header" id="headingOne">
-                                <h2 class="mb-0">
-                                    <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        <strong>First Floor</strong>
-                                    </button>
-                                </h2>
-                            </div>
-                      
-                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#hk-accordion">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-xs-2">
-                                            
-                                        </div>
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Second Floor
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col">
+                                        <table class="table table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Room #</th>
+                                                    <th scope="col">HK Status</th>
+                                                    <th scope="col">Assign To</th>
+                                                    <th scope="col"></th>
+                                                    <th scope="col">Room #</th>
+                                                    <th scope="col">HK Status</th>
+                                                    <th scope="col">Assign To</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">101</th>
+                                                    <td><select name="hk-status-name" class="form-control status-name">
+                                                        <option selected>Select...</option>
+                                                        <option value="dirty">Dirty</option>
+                                                        <option value="clean">Clean</option>
+                                                        <option value="inspect">Inspect</option>
+                                                        <option value="touchup">TouchUp</option>
+                                                        <option value="dnd">DND</option>
+                                                        </select>
+                                                    </td>
+                                                    <td><select name="hk-name" class="form-control hk-name">
+                                                        <option selected>Select...</option>
+                                                        <option value="hk_1">Alexis Smith</option>
+                                                        <option value="hk_2">Clair Johnson</option>
+                                                        <option value="hk_3">Rebecca Murray</option>
+                                                        <option value="hk_4">Karla Tavarez</option>
+                                                        <option value="hk_5">Leslie Nayeli</option>
+                                                        </select>
+                                                    </td>
+                                                    <td></td>
+                                                    <th scope="row">102</th>
+                                                    <td><select name="hk-status-name" class="form-control status-name">
+                                                        <option selected>Select...</option>
+                                                        <option value="dirty">Dirty</option>
+                                                        <option value="clean">Clean</option>
+                                                        <option value="inspect">Inspect</option>
+                                                        <option value="touchup">TouchUp</option>
+                                                        <option value="dnd">DND</option>
+                                                        </select>
+                                                    </td>
+                                                    <td><select name="hk-name" class="form-control hk-name">
+                                                        <option selected>Select...</option>
+                                                        <option value="hk_1">Alexis Smith</option>
+                                                        <option value="hk_2">Clair Johnson</option>
+                                                        <option value="hk_3">Rebecca Murray</option>
+                                                        <option value="hk_4">Karla Tavarez</option>
+                                                        <option value="hk_5">Leslie Nayeli</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">103</th>
+                                                    <td><select name="hk-status-name" class="form-control status-name">
+                                                        <option selected>Select...</option>
+                                                        <option value="dirty">Dirty</option>
+                                                        <option value="clean">Clean</option>
+                                                        <option value="inspect">Inspect</option>
+                                                        <option value="touchup">TouchUp</option>
+                                                        <option value="dnd">DND</option>
+                                                        </select>
+                                                    </td>
+                                                    <td><select name="hk-name" class="form-control hk-name">
+                                                        <option selected>Select...</option>
+                                                        <option value="hk_1">Alexis Smith</option>
+                                                        <option value="hk_2">Clair Johnson</option>
+                                                        <option value="hk_3">Rebecca Murray</option>
+                                                        <option value="hk_4">Karla Tavarez</option>
+                                                        <option value="hk_5">Leslie Nayeli</option>
+                                                        </select>
+                                                    </td>
+                                                    <td></td>
+                                                    <th scope="row">104</th>
+                                                    <td><select name="hk-status-name" class="form-control status-name">
+                                                        <option selected>Select...</option>
+                                                        <option value="dirty">Dirty</option>
+                                                        <option value="clean">Clean</option>
+                                                        <option value="inspect">Inspect</option>
+                                                        <option value="touchup">TouchUp</option>
+                                                        <option value="dnd">DND</option>
+                                                        </select>
+                                                    </td>
+                                                    <td><select name="hk-name" class="form-control hk-name">
+                                                        <option selected>Select...</option>
+                                                        <option value="hk_1">Alexis Smith</option>
+                                                        <option value="hk_2">Clair Johnson</option>
+                                                        <option value="hk_3">Rebecca Murray</option>
+                                                        <option value="hk_4">Karla Tavarez</option>
+                                                        <option value="hk_5">Leslie Nayeli</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">105</th>
+                                                    <td><select name="hk-status-name" class="form-control status-name">
+                                                        <option selected>Select...</option>
+                                                        <option value="dirty">Dirty</option>
+                                                        <option value="clean">Clean</option>
+                                                        <option value="inspect">Inspect</option>
+                                                        <option value="touchup">TouchUp</option>
+                                                        <option value="dnd">DND</option>
+                                                        </select>
+                                                    </td>
+                                                    <td><select name="hk-name" class="form-control hk-name">
+                                                        <option selected>Select...</option>
+                                                        <option value="hk_1">Alexis Smith</option>
+                                                        <option value="hk_2">Clair Johnson</option>
+                                                        <option value="hk_3">Rebecca Murray</option>
+                                                        <option value="hk_4">Karla Tavarez</option>
+                                                        <option value="hk_5">Leslie Nayeli</option>
+                                                        </select>
+                                                    </td>
+                                                    <td></td>
+                                                    <th scope="row">106</th>
+                                                    <td><select name="hk-status-name" class="form-control status-name">
+                                                        <option selected>Select...</option>
+                                                        <option value="dirty">Dirty</option>
+                                                        <option value="clean">Clean</option>
+                                                        <option value="inspect">Inspect</option>
+                                                        <option value="touchup">TouchUp</option>
+                                                        <option value="dnd">DND</option>
+                                                        </select>
+                                                    </td>
+                                                    <td><select name="hk-name" class="form-control hk-name">
+                                                        <option selected>Select...</option>
+                                                        <option value="hk_1">Alexis Smith</option>
+                                                        <option value="hk_2">Clair Johnson</option>
+                                                        <option value="hk_3">Rebecca Murray</option>
+                                                        <option value="hk_4">Karla Tavarez</option>
+                                                        <option value="hk_5">Leslie Nayeli</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">107</th>
+                                                    <td><select name="hk-status-name" class="form-control status-name">
+                                                        <option selected>Select...</option>
+                                                        <option value="dirty">Dirty</option>
+                                                        <option value="clean">Clean</option>
+                                                        <option value="inspect">Inspect</option>
+                                                        <option value="touchup">TouchUp</option>
+                                                        <option value="dnd">DND</option>
+                                                        </select>
+                                                    </td>
+                                                    <td><select name="hk-name" class="form-control hk-name">
+                                                        <option selected>Select...</option>
+                                                        <option value="hk_1">Alexis Smith</option>
+                                                        <option value="hk_2">Clair Johnson</option>
+                                                        <option value="hk_3">Rebecca Murray</option>
+                                                        <option value="hk_4">Karla Tavarez</option>
+                                                        <option value="hk_5">Leslie Nayeli</option>
+                                                        </select>
+                                                    </td>
+                                                    <td></td>
+                                                    <th scope="row">108</th>
+                                                    <td><select name="hk-status-name" class="form-control status-name">
+                                                        <option selected>Select...</option>
+                                                        <option value="dirty">Dirty</option>
+                                                        <option value="clean">Clean</option>
+                                                        <option value="inspect">Inspect</option>
+                                                        <option value="touchup">TouchUp</option>
+                                                        <option value="dnd">DND</option>
+                                                        </select>
+                                                    </td>
+                                                    <td><select name="hk-name" class="form-control hk-name">
+                                                        <option selected>Select...</option>
+                                                        <option value="hk_1">Alexis Smith</option>
+                                                        <option value="hk_2">Clair Johnson</option>
+                                                        <option value="hk_3">Rebecca Murray</option>
+                                                        <option value="hk_4">Karla Tavarez</option>
+                                                        <option value="hk_5">Leslie Nayeli</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">109</th>
+                                                    <td><select name="hk-status-name" class="form-control status-name">
+                                                        <option selected>Select...</option>
+                                                        <option value="dirty">Dirty</option>
+                                                        <option value="clean">Clean</option>
+                                                        <option value="inspect">Inspect</option>
+                                                        <option value="touchup">TouchUp</option>
+                                                        <option value="dnd">DND</option>
+                                                        </select>
+                                                    </td>
+                                                    <td><select name="hk-name" class="form-control hk-name">
+                                                        <option selected>Select...</option>
+                                                        <option value="hk_1">Alexis Smith</option>
+                                                        <option value="hk_2">Clair Johnson</option>
+                                                        <option value="hk_3">Rebecca Murray</option>
+                                                        <option value="hk_4">Karla Tavarez</option>
+                                                        <option value="hk_5">Leslie Nayeli</option>
+                                                        </select>
+                                                    </td>
+                                                    <td></td>
+                                                    <th scope="row">110</th>
+                                                    <td><select name="hk-status-name" class="form-control status-name">
+                                                        <option selected>Select...</option>
+                                                        <option value="dirty">Dirty</option>
+                                                        <option value="clean">Clean</option>
+                                                        <option value="inspect">Inspect</option>
+                                                        <option value="touchup">TouchUp</option>
+                                                        <option value="dnd">DND</option>
+                                                        </select>
+                                                    </td>
+                                                    <td><select name="hk-name" class="form-control hk-name">
+                                                        <option selected>Select...</option>
+                                                        <option value="hk_1">Alexis Smith</option>
+                                                        <option value="hk_2">Clair Johnson</option>
+                                                        <option value="hk_3">Rebecca Murray</option>
+                                                        <option value="hk_4">Karla Tavarez</option>
+                                                        <option value="hk_5">Leslie Nayeli</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
-           
-        
-        
-        
                                 </div>
                             </div>
                         </div>
-        
-                        <div class="card">
-                            <div class="card-header" id="headingTwo">
-                                <h2 class="mb-0">
-                                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        <strong>Second Floor</strong>
-                                    </button>
-                                </h2>
-                            </div>
-                            
-                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                                <div class="card-body">
-        
-        
-        
-        
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="card">
-                            <div class="card-header" id="headingThree">
-                                <h2 class="mb-0">
-                                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        <strong>Third Floor</strong>
-                                    </button>
-                                </h2>
-                            </div>
-                            
-                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                                <div class="card-body">
-                              
-        
-        
-        
-        
-                                
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header" id="headingThree">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Third Floor
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col">
+                                        <table class="table table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Room #</th>
+                                                    <th scope="col">HK Status</th>
+                                                    <th scope="col">Assign To</th>
+                                                    <th scope="col"></th>
+                                                    <th scope="col">Room #</th>
+                                                    <th scope="col">HK Status</th>
+                                                    <th scope="col">Assign To</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">101</th>
+                                                    <td><select name="hk-status-name" class="form-control status-name">
+                                                        <option selected>Select...</option>
+                                                        <option value="dirty">Dirty</option>
+                                                        <option value="clean">Clean</option>
+                                                        <option value="inspect">Inspect</option>
+                                                        <option value="touchup">TouchUp</option>
+                                                        <option value="dnd">DND</option>
+                                                        </select>
+                                                    </td>
+                                                    <td><select name="hk-name" class="form-control hk-name">
+                                                        <option selected>Select...</option>
+                                                        <option value="hk_1">Alexis Smith</option>
+                                                        <option value="hk_2">Clair Johnson</option>
+                                                        <option value="hk_3">Rebecca Murray</option>
+                                                        <option value="hk_4">Karla Tavarez</option>
+                                                        <option value="hk_5">Leslie Nayeli</option>
+                                                        </select>
+                                                    </td>
+                                                    <td></td>
+                                                    <th scope="row">102</th>
+                                                    <td><select name="hk-status-name" class="form-control status-name">
+                                                        <option selected>Select...</option>
+                                                        <option value="dirty">Dirty</option>
+                                                        <option value="clean">Clean</option>
+                                                        <option value="inspect">Inspect</option>
+                                                        <option value="touchup">TouchUp</option>
+                                                        <option value="dnd">DND</option>
+                                                        </select>
+                                                    </td>
+                                                    <td><select name="hk-name" class="form-control hk-name">
+                                                        <option selected>Select...</option>
+                                                        <option value="hk_1">Alexis Smith</option>
+                                                        <option value="hk_2">Clair Johnson</option>
+                                                        <option value="hk_3">Rebecca Murray</option>
+                                                        <option value="hk_4">Karla Tavarez</option>
+                                                        <option value="hk_5">Leslie Nayeli</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">103</th>
+                                                    <td><select name="hk-status-name" class="form-control status-name">
+                                                        <option selected>Select...</option>
+                                                        <option value="dirty">Dirty</option>
+                                                        <option value="clean">Clean</option>
+                                                        <option value="inspect">Inspect</option>
+                                                        <option value="touchup">TouchUp</option>
+                                                        <option value="dnd">DND</option>
+                                                        </select>
+                                                    </td>
+                                                    <td><select name="hk-name" class="form-control hk-name">
+                                                        <option selected>Select...</option>
+                                                        <option value="hk_1">Alexis Smith</option>
+                                                        <option value="hk_2">Clair Johnson</option>
+                                                        <option value="hk_3">Rebecca Murray</option>
+                                                        <option value="hk_4">Karla Tavarez</option>
+                                                        <option value="hk_5">Leslie Nayeli</option>
+                                                        </select>
+                                                    </td>
+                                                    <td></td>
+                                                    <th scope="row">104</th>
+                                                    <td><select name="hk-status-name" class="form-control status-name">
+                                                        <option selected>Select...</option>
+                                                        <option value="dirty">Dirty</option>
+                                                        <option value="clean">Clean</option>
+                                                        <option value="inspect">Inspect</option>
+                                                        <option value="touchup">TouchUp</option>
+                                                        <option value="dnd">DND</option>
+                                                        </select>
+                                                    </td>
+                                                    <td><select name="hk-name" class="form-control hk-name">
+                                                        <option selected>Select...</option>
+                                                        <option value="hk_1">Alexis Smith</option>
+                                                        <option value="hk_2">Clair Johnson</option>
+                                                        <option value="hk_3">Rebecca Murray</option>
+                                                        <option value="hk_4">Karla Tavarez</option>
+                                                        <option value="hk_5">Leslie Nayeli</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">105</th>
+                                                    <td><select name="hk-status-name" class="form-control status-name">
+                                                        <option selected>Select...</option>
+                                                        <option value="dirty">Dirty</option>
+                                                        <option value="clean">Clean</option>
+                                                        <option value="inspect">Inspect</option>
+                                                        <option value="touchup">TouchUp</option>
+                                                        <option value="dnd">DND</option>
+                                                        </select>
+                                                    </td>
+                                                    <td><select name="hk-name" class="form-control hk-name">
+                                                        <option selected>Select...</option>
+                                                        <option value="hk_1">Alexis Smith</option>
+                                                        <option value="hk_2">Clair Johnson</option>
+                                                        <option value="hk_3">Rebecca Murray</option>
+                                                        <option value="hk_4">Karla Tavarez</option>
+                                                        <option value="hk_5">Leslie Nayeli</option>
+                                                        </select>
+                                                    </td>
+                                                    <td></td>
+                                                    <th scope="row">106</th>
+                                                    <td><select name="hk-status-name" class="form-control status-name">
+                                                        <option selected>Select...</option>
+                                                        <option value="dirty">Dirty</option>
+                                                        <option value="clean">Clean</option>
+                                                        <option value="inspect">Inspect</option>
+                                                        <option value="touchup">TouchUp</option>
+                                                        <option value="dnd">DND</option>
+                                                        </select>
+                                                    </td>
+                                                    <td><select name="hk-name" class="form-control hk-name">
+                                                        <option selected>Select...</option>
+                                                        <option value="hk_1">Alexis Smith</option>
+                                                        <option value="hk_2">Clair Johnson</option>
+                                                        <option value="hk_3">Rebecca Murray</option>
+                                                        <option value="hk_4">Karla Tavarez</option>
+                                                        <option value="hk_5">Leslie Nayeli</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">107</th>
+                                                    <td><select name="hk-status-name" class="form-control status-name">
+                                                        <option selected>Select...</option>
+                                                        <option value="dirty">Dirty</option>
+                                                        <option value="clean">Clean</option>
+                                                        <option value="inspect">Inspect</option>
+                                                        <option value="touchup">TouchUp</option>
+                                                        <option value="dnd">DND</option>
+                                                        </select>
+                                                    </td>
+                                                    <td><select name="hk-name" class="form-control hk-name">
+                                                        <option selected>Select...</option>
+                                                        <option value="hk_1">Alexis Smith</option>
+                                                        <option value="hk_2">Clair Johnson</option>
+                                                        <option value="hk_3">Rebecca Murray</option>
+                                                        <option value="hk_4">Karla Tavarez</option>
+                                                        <option value="hk_5">Leslie Nayeli</option>
+                                                        </select>
+                                                    </td>
+                                                    <td></td>
+                                                    <th scope="row">108</th>
+                                                    <td><select name="hk-status-name" class="form-control status-name">
+                                                        <option selected>Select...</option>
+                                                        <option value="dirty">Dirty</option>
+                                                        <option value="clean">Clean</option>
+                                                        <option value="inspect">Inspect</option>
+                                                        <option value="touchup">TouchUp</option>
+                                                        <option value="dnd">DND</option>
+                                                        </select>
+                                                    </td>
+                                                    <td><select name="hk-name" class="form-control hk-name">
+                                                        <option selected>Select...</option>
+                                                        <option value="hk_1">Alexis Smith</option>
+                                                        <option value="hk_2">Clair Johnson</option>
+                                                        <option value="hk_3">Rebecca Murray</option>
+                                                        <option value="hk_4">Karla Tavarez</option>
+                                                        <option value="hk_5">Leslie Nayeli</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">109</th>
+                                                    <td><select name="hk-status-name" class="form-control status-name">
+                                                        <option selected>Select...</option>
+                                                        <option value="dirty">Dirty</option>
+                                                        <option value="clean">Clean</option>
+                                                        <option value="inspect">Inspect</option>
+                                                        <option value="touchup">TouchUp</option>
+                                                        <option value="dnd">DND</option>
+                                                        </select>
+                                                    </td>
+                                                    <td><select name="hk-name" class="form-control hk-name">
+                                                        <option selected>Select...</option>
+                                                        <option value="hk_1">Alexis Smith</option>
+                                                        <option value="hk_2">Clair Johnson</option>
+                                                        <option value="hk_3">Rebecca Murray</option>
+                                                        <option value="hk_4">Karla Tavarez</option>
+                                                        <option value="hk_5">Leslie Nayeli</option>
+                                                        </select>
+                                                    </td>
+                                                    <td></td>
+                                                    <th scope="row">110</th>
+                                                    <td><select name="hk-status-name" class="form-control status-name">
+                                                        <option selected>Select...</option>
+                                                        <option value="dirty">Dirty</option>
+                                                        <option value="clean">Clean</option>
+                                                        <option value="inspect">Inspect</option>
+                                                        <option value="touchup">TouchUp</option>
+                                                        <option value="dnd">DND</option>
+                                                        </select>
+                                                    </td>
+                                                    <td><select name="hk-name" class="form-control hk-name">
+                                                        <option selected>Select...</option>
+                                                        <option value="hk_1">Alexis Smith</option>
+                                                        <option value="hk_2">Clair Johnson</option>
+                                                        <option value="hk_3">Rebecca Murray</option>
+                                                        <option value="hk_4">Karla Tavarez</option>
+                                                        <option value="hk_5">Leslie Nayeli</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
                         </div>

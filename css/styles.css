@@ -16,7 +16,7 @@
     width: 345px;
     position: fixed;
     left: 0;
-    /* padding-top: 1rem; */
+    padding-top: 1rem;
     top: 0%;
     height: 100%;
     background-color: #57C5B6;
@@ -38,7 +38,6 @@
 
 .sidebar-brand span {
     display: inline-block;
-    /* padding-left: 1rem; */
 }
 
 .sidebar-brand span:last-child{
@@ -58,7 +57,7 @@
 .sidebar-items a {
     padding-left: 1rem;
     display: block;
-    color:#fff;
+    color:#002B5B;;
     font-size: 1.2rem;
     font-weight: 400;
     text-decoration: none;
@@ -73,12 +72,10 @@
 }
 
 .sidebar-items li:hover {
-    background: rgb(241, 237, 237);
+    background: white;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    color: #002B5B;
-    border-radius: 30px 0px;
-
+    border-radius: 30px 0px 0px 30px;
 }
 
 .sidebar-items a span:first-child {
@@ -153,7 +150,6 @@ header label span {
     margin-bottom: 0;
     text-align: start;
     padding: 0;
-    
 }
 
 .user-wrapper small {
@@ -163,12 +159,12 @@ header label span {
     padding-left: 1rem;
 }
 
-main{
+/* main{
     margin-top: 2px;
-    /* padding: 2rem 1.5rem; */
+    padding: 2rem 1.5rem;
     background: #f1f5f9;
     min-height: calc(100vh - 90px);
-}
+} */
 
 /*============== Cards ==============*/
 
@@ -212,6 +208,10 @@ main{
 
 
 /*============== HK Status Table ==============*/
+
+.borderless td, .borderless th {
+    border: none;
+}
 
 .hk-status table tbody tr td:first-child{
     text-align: end;
