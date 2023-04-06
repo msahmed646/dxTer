@@ -159,13 +159,6 @@ header label span {
     padding-left: 1rem;
 }
 
-/* main{
-    margin-top: 2px;
-    padding: 2rem 1.5rem;
-    background: #f1f5f9;
-    min-height: calc(100vh - 90px);
-} */
-
 /*============== Cards ==============*/
 
 .overview {
@@ -259,4 +252,12 @@ header label span {
 
 .form-group row{
     padding: 2rem;
+}
+
+.container-fluid {
+    padding-top: 2rem;
+}
+
+.accordion {
+    padding-top: 2rem;
 }
