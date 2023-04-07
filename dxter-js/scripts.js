@@ -2,7 +2,7 @@ $(function() {
       $('#hkAccordion').on('hidden.bs.collapse', function () {
         show.bs.collapse
       })
-      
+
 });
 
 function showGoAlert() {
@@ -10,9 +10,7 @@ function showGoAlert() {
 }
 
 function logoutAlert() {
-    alert("This will lead you back to the login page, that has not been designed yet.");
+    alert("This will lead you back to the login page, which has not been designed yet.");
 }
-
-
 
 

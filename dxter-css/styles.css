@@ -27,13 +27,13 @@
 .sidebar-brand {
     height: 90px;
     padding: 1rem 0 1rem 2rem;
-    color: #002B5B;
     
 }
 
 .sidebar-brand h1 {
     font-weight: bold;
     font-style: oblique;
+    color: #002B5B;
 }
 
 .sidebar-brand span {
@@ -168,14 +168,11 @@ header label span {
     padding-top: 2rem;
 }
 
-.cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 2rem;
+.overview .card{
     margin-top: 1rem;
-} 
-
-.card-single{
+    width: 100%;
+}
+.overview .card-single{
     display: flex;
     justify-content: space-between;
     padding: 2rem;
@@ -251,18 +248,22 @@ header label span {
 }
 
 
-/*============== Housekeeping ==============*/
+/*============== Housekeeping & Maintenance ==============*/
 
 .form-group row{
     padding: 2rem;
 }
 
 .container-fluid {
-    padding-top: 2rem;
+    padding-top: 1rem;
+}
+
+.container-fluid .form div {
+    padding-left: 2rem;
 }
 
 .accordion {
-    margin-top: 3rem;
+    margin-top: 1rem;
 }
 
 .accordion .card-header{
