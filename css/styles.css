@@ -19,7 +19,7 @@
     padding-top: 1rem;
     top: 0%;
     height: 100%;
-    background-color: #57C5B6;
+    background-color: #15989661;
     z-index: 100;
     transition: width 300ms;
 }
@@ -87,6 +87,9 @@
     width: 70px;
 }
 
+#nav-toggle {
+    display: none;
+}
 #nav-toggle:checked + .sidebar-brand,
 #nav-toggle:checked + .sidebar-items{
     padding-left: 1rem;
@@ -192,7 +195,7 @@ header label span {
 .card-single:first-child h1, 
 .card-single :last-child div:first-child span,
 .card-single :last-child div:last-child span {
-    color: #000;
+    color: #1A5F7A;
 }
 
 .hk-status {
@@ -227,16 +230,21 @@ header label span {
 }
 
 .work-status table thead {
-    background-color: #159895;
+    background-color: #c2d7d6;
 }
 
-.work-status table thead th {
+.work-status .card-header h2{
+    color: #002B5B;
+}
+.work-status table thead td {
     font-size: large;
-    font-weight: 1000;
-    font-style: oblique;
-    color: #fff;
+    font-weight: 550;
+    font-style: normal;
+    color: #002B5B;
     text-align: center;
 }
+
+
 
 .work-status table tbody {
     text-align: center;
@@ -254,5 +262,17 @@ header label span {
 }
 
 .accordion {
-    padding-top: 2rem;
+    margin-top: 3rem;
+}
+
+.accordion .card-header{
+    background-color: rgb(238, 235, 235);
+}
+
+.accordion .card-header button{
+    text-decoration: none;
+    color: #1A5F7A;
+}
+#collapseOne, #collapseTwo, #collapseThree table th {
+    text-align: center;
 }
