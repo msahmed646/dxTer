@@ -33,15 +33,15 @@
                 </li>
 
                 <li>
-                    <a title="" href="#"><span class="fa-solid fa-wrench"></span><span>Maintenance</span></a>
+                    <a title="" href="maintenance.html"><span class="fa-solid fa-wrench"></span><span>Maintenance</span></a>
                 </li>
 
                 <li>
-                    <a title="" href="#"><span class="fa-solid fa-comments"></span><span>Messages</span></a>
+                    <a title="" href="messages.html"><span class="fa-solid fa-comments"></span><span>Messages</span></a>
                 </li>
 
                 <li>
-                    <a title="" href="#"><span class="fa-solid fa-gear"></span><span>Settings</span></a>
+                    <a title="" href="settings.html"><span class="fa-solid fa-gear"></span><span>Settings</span></a>
                 </li>
             </ul>
         </div>
@@ -61,7 +61,7 @@
                     </div>
                         
                     <div class="col">
-                        <a title="" href="#" class="float-right"><span class="fa-solid fa-right-from-bracket"></span>Logout</a>
+                        <a title="" href="#" class="float-right" onclick="logoutAlert()"><span class="fa-solid fa-right-from-bracket"></span>Logout</a>
                     </div>
                 </div>
             </div>
@@ -80,11 +80,11 @@
                             </select>
                         </div>
                         <div class="col-sm-7">
-                            <button type="button" class="btn btn-info">Go</button>
+                            <button type="button" class="btn btn-info" id="goButton" onclick="showGoAlert()">Go</button>
                         </div>
 
                         <div class="col">
-                            <a title="" href=""><span class="fas fa-print"></span></a>
+                            <a title="" href="" onclick="showGoAlert()"><span class="fas fa-print"></span></a>
                         </div>
                     </div>
                 </form>
@@ -327,7 +327,7 @@
                                                 </tr>
                                             </tbody>
                                         </table>
-                                        <button type="button" class="btn btn-info btn-lg btn-block">Save Changes</button>
+                                        <button type="button" class="btn btn-info btn-lg btn-block" onclick="showGoAlert()">Save Changes</button>
                                     </div>
                                 </div>
                             </div>
@@ -568,7 +568,7 @@
                                                 </tr>
                                             </tbody>
                                         </table>
-                                        <button type="button" class="btn btn-info btn-lg btn-block">Save Changes</button>
+                                        <button type="button" class="btn btn-info btn-lg btn-block" onclick="showGoAlert()">Save Changes</button>
                                     </div>
                                 </div>
                             </div>
@@ -809,7 +809,7 @@
                                                 </tr>
                                             </tbody>
                                         </table>
-                                        <button type="button" class="btn btn-info btn-lg btn-block">Save Changes</button>
+                                        <button type="button" class="btn btn-info btn-lg btn-block" onclick="showGoAlert()">Save Changes</button>
                                     </div>
                                 </div>
                             </div>
@@ -1050,7 +1050,7 @@
                                                 </tr>
                                             </tbody>
                                         </table>
-                                        <button type="button" class="btn btn-info btn-lg btn-block">Save Changes</button>
+                                        <button type="button" class="btn btn-info btn-lg btn-block" onclick="showGoAlert()">Save Changes</button>
                                     </div>
                                 </div>
                             </div>
@@ -1291,7 +1291,7 @@
                                                 </tr>
                                             </tbody>
                                         </table>
-                                        <button type="button" class="btn btn-info btn-lg btn-block">Save Changes</button>
+                                        <button type="button" class="btn btn-info btn-lg btn-block" onclick="showGoAlert()">Save Changes</button>
                                     </div>
                                 </div>
                             </div>

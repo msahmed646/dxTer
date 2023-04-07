@@ -276,3 +276,9 @@ header label span {
 #collapseOne, #collapseTwo, #collapseThree table th {
     text-align: center;
 }
+
+
+.construction-main{
+    padding-top: 10rem;
+    text-align: center;
+}
