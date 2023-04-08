@@ -179,6 +179,11 @@ header label span {
     border-radius: 2px;
 }
 
+.overview a {
+    text-decoration: none;
+    color: #1A5F7A;
+}
+
 .overview .card:first-child {
     background-color: #faecec;
 }
