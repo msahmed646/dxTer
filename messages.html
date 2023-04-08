@@ -15,12 +15,61 @@
     <link rel="stylesheet" href="dxter-css/styles.css" />
 </head>
 <body>
-    <main class="construction-main">
-        <section class="contact">
-        <h1 class="title">Ooops... I haven't got to this part yet.</h1>
-        <h2 class="sub-title">Site Under Construction</h2>
-        <a title="" href="index.html"><span class="fas fa-home"></span>Click to get back to the site</a>
-        </section>
-    </main>
+    <input type="checkbox" id="nav-toggle" />
+    <div class="sidebar">
+        <div class="sidebar-brand">
+            <a title="" href="index.html"><h1><span class="brand fas fa-clipboard-check"></span><span>dxTer</span></h1></a>
+        </div>
+    
+        <div class="sidebar-items">
+            <ul>
+                <li>
+                    <a title="" href="index.html" ><span class="fa-solid fa-igloo"></span><span>Dashboard</span></a>
+                </li>
+
+                <li>
+                    <a title="" href="housekeeping.html"><span class="fa-solid fa-broom"></span><span>Housekeeping</span></a>
+                </li>
+
+                <li>
+                    <a title="" href="maintenance.html"><span class="fa-solid fa-wrench"></span><span>Maintenance</span></a>
+                </li>
+
+                <li>
+                    <a title="" href="#" class="active"><span class="fa-solid fa-comments"></span><span>Messages</span></a>
+                </li>
+
+                <li>
+                    <a title="" href="settings.html"><span class="fa-solid fa-gear"></span><span>Settings</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="content">
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2>
+                            <label for="nav-toggle">
+                                <span class="fas fa-bars"></span>
+                            </label>
+                            Messages
+                        </h2>
+                    </div>
+                        
+                    <div class="col">
+                        <a title="" href="#" class="float-right"  onclick="logoutAlert()"><span class="fa-solid fa-right-from-bracket"></span>Logout</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <main class="construction-main">
+            <h1 class="title">Ooops... I haven't got to this part yet.</h1>
+            <h2 class="sub-title"><span class="fas fa-exclamation-triangle fa-lg"></span> Site Under Construction <span class="fas fa-exclamation-triangle fa-lg"></span></h2>
+        </main>
+    </div>
 </body>
 </html>
